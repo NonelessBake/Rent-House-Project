@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/icons.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/imgs/logo.png" />
+  </head>
+  <body>
+    <header class="headerBG">
+      <div class="container navbar--custom">
+        <div>
+          <a href="/index.html"
+            ><img src="/assets/imgs/logo.png" alt="logo" width="50px" />
+            <span class="nameProject"> Tìm Trọ Online</span></a
+          >
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+          <li>
+            <div class="under"><a href="#">FAQ</a></div>
+          </li>
+          <li>
+            <div class="under"><a href="#">Tố Cáo</a></div>
+          </li>
+          <li>
+            <div class="under"><a href="#">Góp Ý</a></div>
+          </li>
+          <li>
+            <div class="under"><a href="#">Hỗ Trợ</a></div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- <section class="notice">
+      <div class="container">
+        <h3></h3>
+      </div>
+    </section> -->
+    <section class="rent-filter">
+      <div class="container">
+        <div class="btn-flex">
+          <div>
+            <button
+              class="btn btnRent"
+              onclick="document.getElementById('btnForm').style.display='block'"
+            >
+              Cho thuê phòng
+            </button>
+            <!-- Form -->
+            <section id="btnForm" class="formRent">
+              <form class="formOnTop animate">
+                <div class="formInfo">
+                  <div class="rightClose">
+                    <button
+                      class="closeBtn"
+                      onclick="document.getElementById('btnForm').style.display='none'"
+                    >
+                      Đóng
+                    </button>
+                  </div>
+                  <div class="logoForm">
+                    <img
+                      src="/assets/imgs/logo.png"
+                      alt="logoform"
+                      width="100px"
+                    />
+                  </div>
+                  <hr />
+                  <label for="name">Họ và Tên:</label>
+                  <input
+                    type="text"
+                    class="inputName"
+                    id="name"
+                    value=""
+                    required
+                  /><br />
+                  <label for="address">Tỉnh/TP:</label>
+                  <input type="text" id="areaInput" required /><br />
+                  <label for="address">Địa chỉ:</label>
+                  <input
+                    type="text"
+                    placeholder="Địa chỉ khu trọ"
+                    id="address"
+                    value=""
+                    required
+                  /><br />
+                  <label for="Số phòng trống:">Số phòng trống:</label>
+                  <input
+                    type="number"
+                    id="numRoomLeft"
+                    value=""
+                    required
+                  /><br />
+                  <label for="address">Giá phòng(VND):</label>
+                  <input
+                    type="number"
+                    id="inputPrice"
+                    value=""
+                    required
+                  /><br />
+                  <label for="phone">Số điện thoại:</label>
+                  <input
+                    type="number"
+                    id="phoneValidate"
+                    value=""
+                    required
+                  /><br />
+                  <label for="image" class="imageHouse">Ảnh phòng trọ:</label>
+                  <input
+                    type="file"
+                    class="imageHouse"
+                    id="imageHouse"
+                    value=""
+                    multiple
+                    required
+                  /><br />
+                  <hr />
+                  <div class="signup">
+                    <input
+                      type="submit"
+                      value="Đăng ký"
+                      onclick="signupBtn()"
+                    />
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- Form -->
+          </div>
+          <div>
+            <button type="button" class="btn" onclick="showAll()">
+              Tất cả
+            </button>
+            <button
+              type="button"
+              class="btn dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Khu vực
+            </button>
+            <ul class="dropdown-menu areaFilter">
+              <li>
+                <a class="dropdown-item" href="#" onclick="filterHCM()"
+                  >TP. Hồ Chí Minh</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="filterHN()"
+                  >Hà Nội</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="filterHP()"
+                  >Hải Phòng</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="filterQN()"
+                  >Quảng Ninh</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="filterNA()"
+                  >Nghệ An</a
+                >
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Giá
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" onclick="under1M()"
+                  >Dưới 1 triệu</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="mid1MAnd2M()"
+                  >1 triệu - 2 triệu</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="higher2M()"
+                  >Trên 2 triệu</a
+                >
+              </li>
+            </ul>
+            <button type="button" class="btn" onclick="isRoomleft()">
+              Còn phòng
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="items">
+      <div class="container text-center" id="infoHouse">
+        <div class="row">
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                a
+                <p>Tên trọ <span class="houseName">Quang Linh</span></p>
+                <p>Tỉnh/TP: <span class="area">Quảng Ninh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 0 </span></p>
+                <p>Giá phòng: <span class="price">800000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Quảng Ninh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left">0</span></p>
+                <p>Giá phòng: <span class="price">900000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ <span class="owner">Nguyễn Minh Hồng</span></p>
+                <p>Tên trọ <span class="houseName">Linh Hồng</span></p>
+                <p>Tỉnh/TP: <span class="area">Hải Phòng</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 0 </span></p>
+                <p>Giá phòng: <span class="price">1000000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Kiều Trang</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 0 </span></p>
+                <p>Giá phòng: <span class="price">1100000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left">0</span></p>
+                <p>Giá phòng: <span class="price">1200000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 2 </span></p>
+                <p>Giá phòng: <span class="price">1300000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 3 </span></p>
+                <p>Giá phòng: <span class="price">1400000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 6 </span></p>
+                <p>Giá phòng: <span class="price">1500000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 1 </span></p>
+                <p>Giá phòng: <span class="price">1900000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Nghệ An</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 2 </span></p>
+                <p>Giá phòng: <span class="price">2000000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Hà Nội</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 8 </span></p>
+                <p>Giá phòng: <span class="price">2000001</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Hà Nội</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 5 </span></p>
+                <p>Giá phòng: <span class="price">2500000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">TP. Hồ Chí Minh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 3 </span></p>
+                <p>Giá phòng: <span class="price">3000000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Nghệ An</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 1 </span></p>
+                <p>Giá phòng: <span class="price">4000000</span></p>
+                <p>Liên hệ: <span class="contact">0948377254</span></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Quảng Ninh</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 1</span></p>
+                <p>Giá phòng: <span class="price">4500000</span></p>
+                <p>
+                  Liên hệ: <span class="contact">0948377254</span>
+                  <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
+          >
+            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <div class="text-info-custom">
+              <div>
+                <p>Chủ trọ: <span class="owner"></span></p>
+                <p>Tên trọ <span class="houseName">Phạm Thanh</span></p>
+                <p>Tỉnh/TP: <span class="area">Hải Phòng</span></p>
+                <p>Địa chỉ: <span class="address">KDC A, Quận B</span></p>
+                <p>Còn phòng: <span class="room-left"> 0 </span></p>
+                <p>Giá phòng: <span class="price">5000000</span></p>
+                <p>
+                  Liên hệ: <span class="contact">0948377254</span>
+                  <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page">
+      <div class="container text-center">
+        <div class="btnPage">
+          <button class="btnPageHighlight">1</button>
+          <button class="btnPageHighlight">2</button>
+          <button class="btnPageHighlight">3</button>
+          <button class="btnPageHighlight">4</button>
+          <button class="btnPageHighlight">5</button>
+          <button class="btnPageHighlight">6</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footerDiv">
+        <div class="row">
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 space text-center"
+          >
+            <div>
+              <img src="/assets/imgs/logo.png" width="150px" alt="logo" />
+            </div>
+            <p>
+              Tìm Trọ Online là một trang web miễn phí hỗ trợ tìm phòng trọ theo
+              ý bản thân.
+            </p>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 space mid-right"
+          >
+            <ul>
+              <h5>Các dự án khác</h5>
+              <li><a href="#">Mua Bán Bất Động sản </a></li>
+              <li><a href="#">Mua Bán Vật Tư, Thiết Bị Nhà Cửa</a></li>
+              <li><a href="#">Hỗ Trợ Khách Hàng</a></li>
+              <li><a href="#">Dịch Vụ Khác</a></li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 space mid-right"
+          >
+            <ul>
+              <h5>Liên Hệ</h5>
+              <li>Email: timtroonline@gmail.com</li>
+              <li>Facebook: Updating</li>
+              <li>Fanpage: Updating</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Boostrap -->
+    <script src="assets/scripts/script.js"></script>
+    <script src="/assets/scripts/data.js"></script>
+  </body>
+</html>
