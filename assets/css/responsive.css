@@ -16,7 +16,6 @@
       width:95px;
       border: none;
   } 
-
 }
 @media (max-width: 575.98px) { 
     .container .btn-flex{
@@ -26,11 +25,15 @@
         align-items: center;
     }
 }
-
 @media (max-width: 767.98px) {  
   .formOnTop{
     width: 100%;
 }
+.formInfo input.imageHouse{
+  width:95px;
+  border: none;
+} 
+.formInfo
     .container .btn-flex{
         display: flex;
         flex-direction: column;
