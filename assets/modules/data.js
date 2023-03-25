@@ -49,7 +49,7 @@ const info =[
         houseName: 'Tuấn Tú',
         area: 'Hải Phòng',
         address:'Hẻm A, Huyện P',
-        room: 0,
+        room: 3,
         priceRent:800000,
         contactPhone:'0955585697',
     },
@@ -71,8 +71,42 @@ const info =[
         priceRent:1500000,
         contactPhone:'0955585697',
     },
-    
-    
+    {  
+        owner: 'Phạm Minh',
+        houseName: 'Minh Mẫn',
+        area: 'Hà Nội',
+        address:'Hẻm C, huyện N',
+        room: 0,
+        priceRent: 1600000,
+        contactPhone: 0955585697 ,
+    },
+    {  
+        owner: 'Phạm Mẫn',
+        houseName: 'Mẫn',
+        area: 'Hà Nội',
+        address:'Hẻm C, huyện N',
+        room: 0,
+        priceRent: 1600000,
+        contactPhone: 0955585697 ,
+    },
+    {  
+        owner: 'Phạm Tuân',
+        houseName: 'Phạm Tuân',
+        area: 'Quảng Ninh',
+        address:'KDC A, huyện B',
+        room: 4,
+        priceRent:1500000,
+        contactPhone:'0955585697',
+    },
+    { 
+        owner: 'Nguyễn Minh',
+        houseName: 'Minh Tú',
+        area: 'Hải Phòng',
+        address:'Hẻm A, Huyện P',
+        room: 2,
+        priceRent:1300000,
+        contactPhone:'0955585697',
+    },
 ];
 /*
     {  
@@ -83,7 +117,6 @@ const info =[
         room: ,
         priceRent: ,
         contactPhone: ,
-        id: ,
     },
 */ 
 for(i=0;i<info.length;i++){
@@ -101,7 +134,7 @@ for(i=0;i<info.length;i++){
     else document.getElementsByClassName("room-left")[i].style.color="greenyellow";
 }
 for(i=0;i<document.getElementsByClassName("highlight").length;i++){
-    if(document.getElementsByClassName('owner')[i].innerHTML.length==0){
+    if(document.getElementsByClassName('owner')[i].innerHTML.length==0)
         document.getElementsByClassName('highlight')[i].style.display='none';
-    }
+    
 }
