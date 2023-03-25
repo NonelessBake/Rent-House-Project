@@ -53,17 +53,7 @@
       </div>
     </section> -->
     <section class="rent-filter">
-      <div class="container">
-        <div class="btn-flex">
-          <div>
-            <button
-              class="btn btnRent"
-              onclick="document.getElementById('btnForm').style.display='block'"
-            >
-              Cho thuê phòng
-            </button>
-            <!-- Form -->
-            <section id="btnForm" class="formRent">
+      <section id="btnForm" class="formRent">
               <form class="formOnTop animate" action="./index.html">
                 <div class="formInfo">
                   <div class="rightClose">
@@ -127,8 +117,6 @@
                     type="file"
                     class="imageHouse"
                     id="imageHouse"
-                    value=""
-                    multiple
                     required
                   /><br />
                   <hr />
@@ -142,6 +130,18 @@
                 </div>
               </form>
             </section>
+            
+      <div class="container">
+        <div class="btn-flex">
+          <div>
+            <button
+              class="btn btnRent"
+              onclick="document.getElementById('btnForm').style.display='block'"
+            >
+              Cho thuê phòng
+            </button>
+            <!-- Form -->
+            
             <!-- Form -->
           </div>
           <div>
@@ -215,13 +215,92 @@
         </div>
       </div>
     </section>
+    <section id="btnForm" class="formRent">
+      <form class="formOnTop animate" action="./index.html">
+        <div class="formInfo">
+          <div class="rightClose">
+            <span
+              onclick="document.getElementById('btnForm').style.display='none'"
+              class="closeBtn"
+              title="Close Modal"
+              >&times;</span
+            >
+          </div>
+
+          <div class="logoForm">
+            <img
+              src="./assets/imgs/logo.png"
+              alt="logoform"
+              width="100px"
+            />
+          </div>
+          <hr />
+          <label for="name">Họ và Tên:</label>
+          <input
+            type="text"
+            class="inputName"
+            id="name"
+            value=""
+            required
+          /><br />
+          <label for="address">Tỉnh/TP:</label>
+          <input type="text" id="areaInput" required /><br />
+          <label for="address">Địa chỉ:</label>
+          <input
+            type="text"
+            placeholder="Địa chỉ khu trọ"
+            id="address"
+            value=""
+            required
+          /><br />
+          <label for="Số phòng trống:">Số phòng trống:</label>
+          <input
+            type="number"
+            id="numRoomLeft"
+            value=""
+            required
+          /><br />
+          <label for="address">Giá phòng(VND):</label>
+          <input
+            type="number"
+            id="inputPrice"
+            value=""
+            required
+          /><br />
+          <label for="phone">Số điện thoại:</label>
+          <input
+            type="number"
+            id="phoneValidate"
+            value=""
+            required
+          /><br />
+          <label for="image" class="imageHouse">Ảnh phòng trọ:</label>
+          <input
+            type="file"
+            class="imageHouse"
+            id="imageHouse"
+            value=""
+            multiple
+            required
+          /><br />
+          <hr />
+          <div class="signup">
+            <input
+              type="submit"
+              value="Đăng ký"
+              onclick="signupBtn()"
+            />
+          </div>
+        </div>
+      </form>
+    </section>  
     <section class="items">
       <div class="container text-center" id="infoHouse">
         <div class="row">
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -237,7 +316,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -253,7 +332,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -269,7 +348,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -285,7 +364,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -301,7 +380,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -317,7 +396,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -333,7 +412,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -349,7 +428,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -365,7 +444,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -381,7 +460,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -397,7 +476,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -413,7 +492,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -429,7 +508,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -445,7 +524,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ: <span class="owner"></span></p>
@@ -461,7 +540,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -477,7 +556,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -493,7 +572,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -509,7 +588,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -525,7 +604,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -541,7 +620,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -557,7 +636,7 @@
           <div
             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3 highlight"
           >
-            <img src="/assets/imgs/id2.png" alt="id2" width="100%" />
+            <img src="./assets/imgs/id2.png" alt="id2" width="100%" />
             <div class="text-info-custom">
               <div>
                 <p>Chủ trọ:<span class="owner"></span></p>
@@ -572,7 +651,7 @@
           </div>
         </div>
       </div>
-    </section>
+    <!-- </section>
     <section class="page">
       <div class="container text-center">
         <div class="btnPage">
@@ -584,6 +663,9 @@
           <button class="btnPageHighlight">6</button>
         </div>
       </div>
+    </section> -->
+    <section class="showMore">
+      <div class="container show-more-center"> <p class="showMoreBtn" onclick="showMore()">Xem thêm</p></div>
     </section>
     <footer class="footer">
       <div class="container footerDiv">

@@ -215,33 +215,6 @@ const info =[
         priceRent:900000,
         contactPhone:'0955585697',
     },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
 ];
 /*
     {  
@@ -254,8 +227,8 @@ const info =[
         contactPhone: ,
     },
 */ 
+console.log(info.length);
 for(i=0;i<info.length;i++){
-    if(i<16){
         document.getElementsByClassName('owner')[i].innerHTML = info[i].owner;
         document.getElementsByClassName('houseName')[i].innerHTML = info[i].houseName;
         document.getElementsByClassName('area')[i].innerHTML = info[i].area;
@@ -264,18 +237,33 @@ for(i=0;i<info.length;i++){
         document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent;
         document.getElementsByClassName('contact')[i].innerHTML = info[i].contactPhone;
         document.getElementsByClassName('price')[i].style.color = 'yellow';
-        document.getElementsByClassName('contact')[i].style.color = 'pink';}
-    else document.getElementsByClassName('highlight')[i].style.display='none';
+        document.getElementsByClassName('contact')[i].style.color = 'pink';
+    if (i>15) document.getElementsByClassName('highlight')[i].style.display='none';
     if(info[i].room===0)
         document.getElementsByClassName("room-left")[i].style.color="red"
     else document.getElementsByClassName("room-left")[i].style.color="greenyellow";
 }
-
-
 for(i=0;i<document.getElementsByClassName("highlight").length;i++){
     if(document.getElementsByClassName('owner')[i].innerHTML.length==0)
         document.getElementsByClassName('highlight')[i].style.display='none';
 }
+function showMore(){
+    for(i=0;i<info.length;i++){
+        if(info.length>16 && info.length<34){{
+            document.getElementsByClassName('highlight')[i].style.display='block';    
+        }
+    }
+}
+}
+function showAll(){
+    for(i=0;i<info.length;i++){
+        if(info.length>16 && info.length<34){{
+            document.getElementsByClassName('highlight')[i].style.display='block';    
+        }
+    }
+}
+}
+
 // function page2(){
 //     for(i=16;i<32;i++){
 //         document.getElementsByClassName('highlight')[i-16].style.display='none';

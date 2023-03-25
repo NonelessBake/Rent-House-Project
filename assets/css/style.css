@@ -135,7 +135,7 @@ body{
     text-align: center;
 }
 .formOnTop{
-    border: 1px linear-gradient(to left, #f46b45, #eea849);;
+    border: 1px solid rgb(243, 203, 203);
     border-radius: 15px;
     padding: 10px 40px  30px  40px;
     width: 40%;
@@ -277,6 +277,22 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 /* btnPage */
+/* show more */
+.show-more-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.showMoreBtn{
+    cursor: pointer;
+    color: aliceblue;
+    width: 80px;
+    transition: .5s;
+}
+.showMoreBtn:hover{
+    color: #f53a07;
+}
+/* show more */
 /* footer */
 .footer{
     border-top: 1px solid;

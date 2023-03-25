@@ -27,6 +27,7 @@ function signupBtn(){
     else alert('Vui lòng nhập chính xác thông tin!');
 }
 
+
 // filter area
 const highlight = document.getElementsByClassName('highlight');
 const area = document.getElementsByClassName('area');
@@ -72,13 +73,7 @@ function filterQN(){
 }
 // filter price
 const price = document.getElementsByClassName('price');
-function showAll(){
-    for(i=0;i<highlight.length;i++){
-        if(document.getElementsByClassName('owner')[i].innerHTML.length==0)
-        document.getElementsByClassName('highlight')[i].style.display='none';
-        else highlight[i].style.display='block';
-    }
-}
+
 function under1M(){
     for(i=0;i<price.length;i++){
         if(Number(price[i].innerHTML)<1000000 && document.getElementsByClassName('owner')[i].innerHTML.length>0){
