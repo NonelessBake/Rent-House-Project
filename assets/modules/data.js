@@ -255,15 +255,14 @@ function showMore(){
     }
 }
 }
-function showAll(){
-    for(i=0;i<info.length;i++){
-        if(info.length>16 && info.length<34){{
-            document.getElementsByClassName('highlight')[i].style.display='block';    
-        }
-    }
-}
-}
-
+// function showAll(){
+//     for(i=0;i<info.length;i++){
+//         if(info.length>16 && info.length<34){{
+//             document.getElementsByClassName('highlight')[i].style.display='block';    
+//         }
+//     }
+// }
+// }
 // function page2(){
 //     for(i=16;i<32;i++){
 //         document.getElementsByClassName('highlight')[i-16].style.display='none';
