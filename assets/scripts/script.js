@@ -36,7 +36,7 @@ function filterHCM(){
         if(area[i].innerHTML!="TP. Hồ Chí Minh"){
             highlight[i].style.display='none';
         }
-        else highlight[i].style.display='block';
+        else highlight[i].style.removeProperty( 'display' );
     }
 }
 function filterHN(){
@@ -44,7 +44,7 @@ function filterHN(){
         if(area[i].innerHTML!="Hà Nội"){
             highlight[i].style.display='none';
         }
-        else highlight[i].style.display='block';
+        else highlight[i].style.removeProperty( 'display' );
     }
 }
 function filterHP(){
@@ -52,7 +52,7 @@ function filterHP(){
         if(area[i].innerHTML!="Hải Phòng"){
             highlight[i].style.display='none';
         }
-        else highlight[i].style.display='block';
+        else highlight[i].style.removeProperty( 'display' );
     }
 }
 function filterNA(){
@@ -60,7 +60,7 @@ function filterNA(){
         if(area[i].innerHTML!="Nghệ An"){
             highlight[i].style.display='none';
         }
-        else highlight[i].style.display='block';
+        else highlight[i].style.removeProperty( 'display' );
     }
 }
 function filterQN(){
@@ -68,32 +68,31 @@ function filterQN(){
         if(area[i].innerHTML!="Quảng Ninh"){
             highlight[i].style.display='none';
         }
-        else highlight[i].style.display='block';
+        else highlight[i].style.removeProperty( 'display' );
     }
 }
 // filter price
 const price = document.getElementsByClassName('price');
-
 function under1M(){
     for(i=0;i<price.length;i++){
-        if(Number(price[i].innerHTML)<1000000 && document.getElementsByClassName('owner')[i].innerHTML.length>0){
-            highlight[i].style.display='block';
+        if(Number(price[i].innerHTML)<1000000){
+            highlight[i].style.removeProperty( 'display' );
         }
         else highlight[i].style.display='none';
     }
 }
 function mid1MAnd2M(){
     for(i=0;i<price.length;i++){
-        if(Number(price[i].innerHTML)>=1000000 && Number(price[i].innerHTML)<=2000000 && document.getElementsByClassName('owner')[i].innerHTML.length>0){
-            highlight[i].style.display='block';
+        if(Number(price[i].innerHTML)>=1000000 && Number(price[i].innerHTML) < 2000000){
+            highlight[i].style.removeProperty( 'display' );
         }
         else highlight[i].style.display='none';
     }
 }
 function higher2M(){
     for(i=0;i<price.length;i++){
-        if(Number(price[i].innerHTML)>2000000 && document.getElementsByClassName('owner')[i].innerHTML.length>0){
-            highlight[i].style.display='block';
+        if(Number(price[i].innerHTML)>2000000){
+            highlight[i].style.removeProperty( 'display' );
         }
         else highlight[i].style.display='none';
     }
@@ -103,7 +102,7 @@ roomLeft = document.getElementsByClassName('room-left')
 function isRoomleft(){
     for(i=0;i<roomLeft.length;i++){
         if(Number(roomLeft[i].innerHTML)>0){
-        highlight[i].style.display='block';
+            highlight[i].style.removeProperty( 'display' );
     }
     else highlight[i].style.display='none';
 }}
