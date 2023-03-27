@@ -247,14 +247,51 @@ for(i=0;i<document.getElementsByClassName("highlight").length;i++){
     if(document.getElementsByClassName('owner')[i].innerHTML.length==0)
         document.getElementsByClassName('highlight')[i].style.display='none';
 }
-function showMore(){
-    for(i=0;i<info.length;i++){
-        if(info.length>16 && info.length<34){{
-            document.getElementsByClassName('highlight')[i].style.display='block';    
-        }
-    }
-}
-}
+// Co the dung event listener cho showMore
+// function showMore(){
+//     for(i=0;i<info.length;i++){
+//         if(info.length>16 && info.length<34){{
+//             document.getElementsByClassName('highlight')[i].style.display='block';    
+//         }
+//     }
+// }
+// }
+// for (i=0;i<info.length;i++){
+//     info[i].priceRent = new Intl.NumberFormat();
+//     document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent.format(document.getElementsByClassName('price')[i].innerHTML);
+// }
+
+
+// function under1M(){
+//     for(i=0;i<info.length;i++){
+//         if(Number(info[i].priceRent)<1000000){
+//             document.getElementsByClassName('owner')[i].innerHTML = info[i].owner;
+//         document.getElementsByClassName('houseName')[i].innerHTML = info[i].houseName;
+//         document.getElementsByClassName('area')[i].innerHTML = info[i].area;
+//         document.getElementsByClassName('address')[i].innerHTML = info[i].address;
+//         document.getElementsByClassName('room-left')[i].innerHTML = info[i].room;
+//         document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent;
+//         document.getElementsByClassName('contact')[i].innerHTML = info[i].contactPhone;}
+//     if (i>15) document.getElementsByClassName('highlight')[i].style.display='none';
+//     }
+// }
+// function mid1MAnd2M(){
+//     for(i=0;i<info.length;i++){
+//         if(Number(info[i].priceRent)>=1000000 && Number(price[i].innerHTML)<=2000000){
+
+//         } 
+//     }
+// }
+// function higher2M(){
+//     for(i=0;i<info.length;i++){
+//         if(Number(info[i].priceRent)>2000000){
+            
+//         }
+//     }
+// }
+
+   
+
 // function showAll(){
 //     for(i=0;i<info.length;i++){
 //         if(info.length>16 && info.length<34){{

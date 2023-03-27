@@ -149,17 +149,17 @@ body{
 .formOnTop label{
     margin: 10px;
 }
-.formInfo input{
+.formOnTop input{
     width: 60%;
     border: 1px solid black;    
     border-radius: 5px;
     padding: 1px 10px;
 }
-.formInfo label{
+.formOnTop label{
     width: 120px;
 }
-.formInfo input.imageHouse{
-    width:auto;
+.formOnTop input.imageHouse{
+    width: 95px;
     border: none;
 } 
 .signup{
@@ -308,7 +308,8 @@ input::-webkit-inner-spin-button {
 /* show more */
 /* footer */
 .footer{
-    border-top: 1px solid;
+
+    border-top: 1px solid red;
     margin-top: 100px;
     background: linear-gradient(to right,black ,rgb(128, 59, 59),black);
 }
@@ -325,6 +326,10 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    
+}
+.footerImg img{
+    width: 30%;
 }
 /* footer */
 

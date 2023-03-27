@@ -53,9 +53,9 @@
       </div>
     </section> -->
     <section class="rent-filter">
-      <section id="btnForm" class="formRent">
-        <form class="formOnTop animate" action="./index.html">
-          <div class="formInfo">
+      <div class="container">
+        <section id="btnForm" class="formRent">
+          <form class="formOnTop animate" action="./index.html">
             <div class="rightClose">
               <span
                 onclick="document.getElementById('btnForm').style.display='none'"
@@ -64,7 +64,6 @@
                 >&times;</span
               >
             </div>
-
             <div class="logoForm">
               <img src="./assets/imgs/logo.png" alt="logoform" width="100px" />
             </div>
@@ -104,11 +103,8 @@
             <div class="signup">
               <input type="submit" value="Đăng ký" onclick="signupBtn()" />
             </div>
-          </div>
-        </form>
-      </section>
-
-      <div class="container">
+          </form>
+        </section>
         <div class="btn-flex">
           <div>
             <button
@@ -119,7 +115,7 @@
             </button>
           </div>
           <div>
-            <button type="button" class="btn box animates">
+            <button type="button" class="btn">
               <a href="./index.html">Tất cả</a>
             </button>
             <button
@@ -189,62 +185,6 @@
         </div>
       </div>
     </section>
-    <section id="btnForm" class="formRent">
-      <form class="formOnTop animate" action="./index.html">
-        <div class="formInfo">
-          <div class="rightClose">
-            <span
-              onclick="document.getElementById('btnForm').style.display='none'"
-              class="closeBtn"
-              title="Close Modal"
-              >&times;</span
-            >
-          </div>
-
-          <div class="logoForm">
-            <img src="./assets/imgs/logo.png" alt="logoform" width="100px" />
-          </div>
-          <hr />
-          <label for="name">Họ và Tên:</label>
-          <input
-            type="text"
-            class="inputName"
-            id="name"
-            value=""
-            required
-          /><br />
-          <label for="address">Tỉnh/TP:</label>
-          <input type="text" id="areaInput" required /><br />
-          <label for="address">Địa chỉ:</label>
-          <input
-            type="text"
-            placeholder="Địa chỉ khu trọ"
-            id="address"
-            value=""
-            required
-          /><br />
-          <label for="Số phòng trống:">Số phòng trống:</label>
-          <input type="number" id="numRoomLeft" value="" required /><br />
-          <label for="address">Giá phòng(VND):</label>
-          <input type="number" id="inputPrice" value="" required /><br />
-          <label for="phone">Số điện thoại:</label>
-          <input type="number" id="phoneValidate" value="" required /><br />
-          <label for="image" class="imageHouse">Ảnh phòng trọ:</label>
-          <input
-            type="file"
-            class="imageHouse"
-            id="imageHouse"
-            value=""
-            multiple
-            required
-          /><br />
-          <hr />
-          <div class="signup">
-            <input type="submit" value="Đăng ký" onclick="signupBtn()" />
-          </div>
-        </div>
-      </form>
-    </section>
     <section class="items">
       <div class="container text-center" id="infoHouse">
         <div class="row">
@@ -259,7 +199,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -275,7 +219,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -291,7 +239,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -307,7 +259,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -323,7 +279,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -339,7 +299,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -355,7 +319,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -371,7 +339,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -387,7 +359,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -403,7 +379,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -419,7 +399,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -435,7 +419,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -451,7 +439,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -467,7 +459,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -483,7 +479,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -499,7 +499,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -515,7 +519,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -531,7 +539,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -547,7 +559,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -563,7 +579,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -579,7 +599,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -595,7 +619,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -611,7 +639,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -627,7 +659,11 @@
                 <p>Tỉnh/TP: <span class="area"></span></p>
                 <p>Địa chỉ: <span class="address"></span></p>
                 <p>Còn phòng: <span class="room-left"></span></p>
-                <p>Giá phòng: <span class="price"></span></p>
+                <p>
+                  Giá phòng:
+                  <span class="priceFilter" style="display: none"></span
+                  ><span class="price"></span>
+                </p>
                 <p>Liên hệ: <span class="contact"></span></p>
               </div>
             </div>
@@ -659,8 +695,8 @@
           <div
             class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 space text-center"
           >
-            <div>
-              <img src="./assets/imgs/logo.png" width="150px" alt="logo" />
+            <div class="footerImg">
+              <img src="./assets/imgs/logo.png" alt="logo" />
             </div>
             <p>
               Tìm Trọ Online là một trang web miễn phí hỗ trợ tìm phòng trọ theo
