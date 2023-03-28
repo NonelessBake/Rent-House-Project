@@ -22,6 +22,14 @@
   }
 }
 @media (max-width: 575.98px) { 
+    #topBtn{
+    bottom: 10px; 
+    font-size: 1px;
+    right:0px; 
+  }
+  #topBtn  {
+    margin: 30px;
+  }
   .imageHouse{
     padding: 0;
     margin: 0;
@@ -111,6 +119,12 @@
   }
 }
 @media (max-width: 991.98px) {  
+  
+  #topBtn{
+    bottom: 100px; 
+    right: 10px; 
+    font-size: 35px;
+  }
   .formOnTop{
     width: 50%;
   } 
@@ -119,6 +133,10 @@
   }
 }
 @media (max-width: 1199.98px) { 
+  #topBtn{
+    bottom: 100px; 
+    right: 60px; 
+  }
   .formOnTop input{
     width: 100%;
     border: 1px solid black;

@@ -75,26 +75,32 @@ function filterQN(){
 const price = document.getElementsByClassName('price');
 function under1M(){
     for(i=0;i<price.length;i++){
-        if(Number(price[i].innerHTML)<1000000){
+        price[i].innerHTML = price[i].innerHTML.replaceAll('.','');
+        if(Number(price[i].innerHTML)<1000000 && Number(price[i].innerHTML)>0){
             highlight[i].style.removeProperty( 'display' );
+            price[i].innerHTML = new Intl.NumberFormat().format(price[i].innerHTML);
         }
         else highlight[i].style.display='none';
     }
 }
 function mid1MAnd2M(){
     for(i=0;i<price.length;i++){
+        price[i].innerHTML = price[i].innerHTML.replaceAll('.','');
         if(Number(price[i].innerHTML)>=1000000 && Number(price[i].innerHTML) < 2000000){
-            highlight[i].style.removeProperty( 'display' );
+            highlight[i].style.removeProperty( 'display' ); 
+            price[i].innerHTML = new Intl.NumberFormat().format(price[i].innerHTML);           
         }
         else highlight[i].style.display='none';
     }
 }
 function higher2M(){
     for(i=0;i<price.length;i++){
+        price[i].innerHTML = price[i].innerHTML.replaceAll('.','');
         if(Number(price[i].innerHTML)>2000000){
-            highlight[i].style.removeProperty( 'display' );
+            highlight[i].style.removeProperty( 'display');
+            price[i].innerHTML = new Intl.NumberFormat().format(price[i].innerHTML);
         }
-        else highlight[i].style.display='none';
+        else highlight[i].style.display='none'; 
     }
 }
 // filter room
@@ -106,3 +112,16 @@ function isRoomleft(){
     }
     else highlight[i].style.display='none';
 }}
+
+let mybutton = document.getElementById("topBtn");
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+}

@@ -143,78 +143,6 @@ const info =[
         priceRent:900000,
         contactPhone:'0955585697',
     },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
-    { 
-        owner: 'Trần Quách',
-        houseName: 'Quách Tống',
-        area: 'Hải Phòng',
-        address:'Hẻm A, Huyện P',
-        room: 3,
-        priceRent:900000,
-        contactPhone:'0955585697',
-    },
 ];
 /*
     {  
@@ -238,6 +166,8 @@ for(i=0;i<info.length;i++){
         document.getElementsByClassName('contact')[i].innerHTML = info[i].contactPhone;
         document.getElementsByClassName('price')[i].style.color = 'yellow';
         document.getElementsByClassName('contact')[i].style.color = 'pink';
+        info[i].priceRent = new Intl.NumberFormat();
+        document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent.format(document.getElementsByClassName('price')[i].innerHTML);
     if (i>15) document.getElementsByClassName('highlight')[i].style.display='none';
     if(info[i].room===0)
         document.getElementsByClassName("room-left")[i].style.color="red"
@@ -256,61 +186,7 @@ for(i=0;i<document.getElementsByClassName("highlight").length;i++){
 //     }
 // }
 // }
-// for (i=0;i<info.length;i++){
-//     info[i].priceRent = new Intl.NumberFormat();
-//     document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent.format(document.getElementsByClassName('price')[i].innerHTML);
-// }
 
 
-// function under1M(){
-//     for(i=0;i<info.length;i++){
-//         if(Number(info[i].priceRent)<1000000){
-//             document.getElementsByClassName('owner')[i].innerHTML = info[i].owner;
-//         document.getElementsByClassName('houseName')[i].innerHTML = info[i].houseName;
-//         document.getElementsByClassName('area')[i].innerHTML = info[i].area;
-//         document.getElementsByClassName('address')[i].innerHTML = info[i].address;
-//         document.getElementsByClassName('room-left')[i].innerHTML = info[i].room;
-//         document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent;
-//         document.getElementsByClassName('contact')[i].innerHTML = info[i].contactPhone;}
-//     if (i>15) document.getElementsByClassName('highlight')[i].style.display='none';
-//     }
-// }
-// function mid1MAnd2M(){
-//     for(i=0;i<info.length;i++){
-//         if(Number(info[i].priceRent)>=1000000 && Number(price[i].innerHTML)<=2000000){
 
-//         } 
-//     }
-// }
-// function higher2M(){
-//     for(i=0;i<info.length;i++){
-//         if(Number(info[i].priceRent)>2000000){
-            
-//         }
-//     }
-// }
-
-   
-
-// function showAll(){
-//     for(i=0;i<info.length;i++){
-//         if(info.length>16 && info.length<34){{
-//             document.getElementsByClassName('highlight')[i].style.display='block';    
-//         }
-//     }
-// }
-// }
-// function page2(){
-//     for(i=16;i<32;i++){
-//         document.getElementsByClassName('highlight')[i-16].style.display='none';
-//         document.getElementsByClassName('owner')[i].innerHTML = info[i].owner;
-//         document.getElementsByClassName('houseName')[i].innerHTML = info[i].houseName;
-//         document.getElementsByClassName('area')[i].innerHTML = info[i].area;
-//         document.getElementsByClassName('address')[i].innerHTML = info[i].address;
-//         document.getElementsByClassName('room-left')[i].innerHTML = info[i].room;
-//         document.getElementsByClassName('price')[i].innerHTML = info[i].priceRent;
-//         document.getElementsByClassName('contact')[i].innerHTML = info[i].contactPhone;
-//         document.getElementsByClassName('highlight')[i].style.display='block';
-//     }
-// }
 
