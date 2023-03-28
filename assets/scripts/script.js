@@ -15,13 +15,13 @@ window.onclick = function(event) {
 // }
 function signupBtn(){
     const nameInput = document.getElementById('name');
-    const areaInput = document.getElementById('areaInput');
+    const houseNameInput = document.getElementById('houseNameInput');
     const addressInput = document.getElementById('address');
     const inputPriceInput = document.getElementById('inputPrice');
     const numRoomLeft = document.getElementById('numRoomLeft');
     const phoneNum = document.getElementById('phoneValidate');
     const imageHouse = document.getElementById('imageHouse');
-    if((Number(numRoomLeft.value)>= 0 && numRoomLeft.value.length>0) && (phoneNum.value.charAt(0)!=' ' && phoneNum.value.charAt(0)==='0' && phoneNum.value.length===10) && (nameInput.value.length>0) && (areaInput.value.length>0) && (addressInput.value.length>0) && (inputPriceInput.value.length>0) && (imageHouse.value.length>0)){
+    if((Number(numRoomLeft.value)>= 0 && numRoomLeft.value.length>0) && (phoneNum.value.charAt(0)!=' ' && phoneNum.value.charAt(0)==='0' && phoneNum.value.length===10) && (nameInput.value.length>0) && (houseNameInput.value.length>0) && (addressInput.value.length>0) && (inputPriceInput.value.length>0) && (imageHouse.value.length>0)){
         alert('Đăng ký thành công vui lòng chờ xác nhận thông tin!');
 }
     else alert('Vui lòng nhập chính xác thông tin!');
