@@ -113,12 +113,12 @@ function isRoomleft(){
     else highlight[i].style.display='none';
 }}
 
-let mybutton = document.getElementById("topBtn");
+let backTopBtn = document.getElementById("backTopBtn");
 window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        mybutton.style.display = "block";
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop >300) {
+        backTopBtn.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        backTopBtn.style.display = "none";
     }
 }
 function topFunction() {

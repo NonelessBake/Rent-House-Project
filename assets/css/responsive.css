@@ -22,8 +22,8 @@
   }
 }
 @media (max-width: 575.98px) { 
-    #topBtn{
-    bottom: 10px; 
+  #backTopBtn{
+    bottom: 0px; 
     font-size: 1px;
     right:0px; 
   }
@@ -119,8 +119,7 @@
   }
 }
 @media (max-width: 991.98px) {  
-  
-  #topBtn{
+  #backTopBtn{
     bottom: 100px; 
     right: 10px; 
     font-size: 35px;
@@ -133,9 +132,9 @@
   }
 }
 @media (max-width: 1199.98px) { 
-  #topBtn{
+  #backTopBtn{
     bottom: 100px; 
-    right: 60px; 
+    right: 70px; 
   }
   .formOnTop input{
     width: 100%;
