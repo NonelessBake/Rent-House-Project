@@ -107,8 +107,10 @@ function higher2M(){
 roomLeft = document.getElementsByClassName('room-left')
 function isRoomleft(){
     for(i=0;i<roomLeft.length;i++){
+        price[i].innerHTML = price[i].innerHTML.replaceAll('.','');
         if(Number(roomLeft[i].innerHTML)>0){
             highlight[i].style.removeProperty( 'display' );
+            price[i].innerHTML = new Intl.NumberFormat().format(price[i].innerHTML);
     }
     else highlight[i].style.display='none';
 }}

@@ -1,4 +1,7 @@
 @media (max-width: 480px) { 
+  .btn{
+    font-size: 5px;
+  }
   .container .btn-flex{
     display: flex;
     flex-direction: column;
@@ -22,6 +25,12 @@
   }
 }
 @media (max-width: 575.98px) { 
+  .btn{
+    
+    font-size: 10px;
+    width: auto;
+    height: auto;
+  }
   #backTopBtn{
     bottom: 0px; 
     font-size: 1px;
@@ -51,6 +60,7 @@
   }
 }
 @media (max-width: 767.98px) {  
+  
   .formOnTop{
     width: 100%;
   }
